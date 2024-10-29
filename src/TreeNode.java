@@ -1,9 +1,14 @@
 public class TreeNode<E extends Comparable<E>> {
-	protected E element;
+	protected E element; // TODO keep for now but delete later
 	protected TreeNode<E> left, right;
 
-	public TreeNode(E e) {
-       element = e;
+	int key, value;
+	boolean color;
+
+	public TreeNode(int key, int value, boolean color) {
+		this.key = key;
+		this.value = value;
+		this.color = color;
 	}
 	public boolean hasLeft () { return left != null;}
 	public boolean hasRight () { return right != null;}
